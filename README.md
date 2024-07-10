@@ -1,11 +1,13 @@
 # Image_Segmentation
 구글링을 통해 정리한 각각의 세그멘테이션 방식
 
+#### 24.07.09
+
 ### Image Segmantation
 - 이미지 처리의 한 분야로, 이미지 내의 각 픽셀을 여러 클래스 중 하나로 분류하는 작업
 - 객체 탐지는 바운딩 박스 단위로 인식을 하는 반면, 세그멘테이션은 바운딩 박스 안에 실제 객체의 영역까지 찾아낼 수 있음 ${\textsf{\textbf{\color{blue} => 큰 차이}}}$
 
-## U-Net 기반의 세그멘테이션 24.07.09
+## U-Net 기반의 세그멘테이션 
 - 모델의 구조가 U자임
 - U-Net이라 불리는 인코더(다운샘플링)와 디코더(업샘플링)를 포함한 구조는 정교한 픽셀 단위의 segmentation이 요구되는 biomedical image segmentation task의 핵심 요소로 사용됨. 뿐만 아니라 세밀한 분류를 하기 위한 분야에도 사용됨
 - Encoder-Decoder 구조 또한 semantic segmentation을 위한 CNN 구조로 자주 활용
@@ -22,8 +24,9 @@
 
 ![image](https://github.com/jysung1122/Image_Segmentation/assets/56614779/6da971d3-d601-48f6-b33f-17f3c8f3188a)
 
+#### 24.07.10
 
-## DeepLap 기반 세그멘테이션 24.07.10
+## DeepLap 기반 세그멘테이션 
 - 버전이 업그레이드 되면서 발전되고 있음
 
 ## DeepLab V1 
