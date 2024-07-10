@@ -43,3 +43,21 @@
 - Atrous convolution을 활용하면 파라미터 수를 늘리지 않으면서도 receptive field를 크게 키울 수 있기 때문에 DeepLab 계열에서는 이를 적극적으로 활용
 
 ![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/aa4c3416-eaac-4007-8a8f-bf1e7d6dc1d0)
+
+## DeepLab V2
+- Semantic segmentaion의 성능을 높이기 위한 방법 중 하나로, spatial pyramid pooling(SPP) 기법을 자주 사용
+  - ${\textsf{\textbf{\color{blue}SPP}}}$
+    - ${\textsf{\textbf{\color{blue}이미지를 다양한 크기의 그리드로 나누어, 각 그리드에서 feature를 추출한 다음, 이 feature들을 결합하여 최종 feature map을 만드는 기법}}}$
+    - ${\textsf{\textbf{\color{blue}이미지의 특정 부분에서 더 많은 정보를 얻어낼 수 있으며, 이미지 크기에 구애받지 않고 일정한 크기의 feature map을 만들 수 있음}}}$
+    - ${\textsf{\textbf{\color{blue}이미지 내의 다양한 스케일에서 정보를 효과적으로 추출할 수 있게 해줌}}}$
+- Feature map으로부터 여러 개의 rate가 다른 atrous convolution을 병렬로 적용한 뒤, 이를 다시 합쳐주는 atrous spatial pyramid pooling (ASPP) 기법을 활용
+  - ${\textsf{\textbf{\color{blue}ASPP}}}$
+    - ${\textsf{\textbf{\color{blue}여러 개의 atrous convolution(빈 공간이 있는 필터)을 벙렬로 적용}}}$
+    - ${\textsf{\textbf{\color{blue}각 필터는 다른 rate(간격)를 가지고 있어서, 각각 다른 크기의 receptive field를 만듦}}}$
+    - ${\textsf{\textbf{\color{blue}이렇게 하면, 이미지의 다양한 스케일에서 정보를 추출할 수 있음}}}$
+    - ${\textsf{\textbf{\color{blue}마지막으로, 다양한 크기의 정보를 하나로 합쳐서 최종 feature map을 만듦}}}$
+    - ${\textsf{\textbf{\color{blue}이는 이미지의 여러 스케일에서 중요한 특징을 모두 포착할 수 있게 해줌}}}$
+    - ${\textsf{\textbf{\color{blue}=> 큰 사진을 배율이 다른 여러 돋보기를 통해서 본다고 생각!}}}$
+- multi-scale context를 모델 구조로 구현하여 보다 정확한 semantic segmentation을 수행할 수 있도록 함
+
+![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/23fc609c-30ce-474a-a092-def9abcd6935)
