@@ -61,3 +61,43 @@
 - multi-scale context를 모델 구조로 구현하여 보다 정확한 semantic segmentation을 수행할 수 있도록 함
 
 ![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/23fc609c-30ce-474a-a092-def9abcd6935)
+
+## DeepLab V3
+- Encoder: ResNet with Atrous convolution
+  - ${\textsf{\textbf{\color{blue}ResNet(Residual Network)은 깊은 신경망에서 발생할 수 있는 문제들을 해결하기 위해}}}$ ${\textsf{\textbf{\color{red}잔차연결}}}$ ${\textsf{\textbf{\color{blue}을 사용하는 네트워크}}}$
+  - ${\textsf{\textbf{\color{blue}=> ResNet은 책을 읽는 방식, Atrous convolution은 돋보기를 사용해서 보는 것}}}$
+    - ${\textsf{\textbf{\color{blue}-> 책의 세부사항과 전체적인 내용을 동시에 잘 이해할 수 있음}}}$
+  - ${\textsf{\textbf{\color{red}잔차연결 : 네트워크의 일부 출력을 네트워크의 더 나중 단계에 다시 추가하는 방법 -> 깊은 신경망에서 정보가 더 잘 전달되고, 학습이 더 쉬워짐}}}$
+    - ${\textsf{\textbf{\color{red}=> 깊은 신경망에서는 각 계단을 오르면서 새로운 것을 배워야 함}}}$
+    - ${\textsf{\textbf{\color{red}   잔차연결은 계단의 중간에 쉬는 플랫폼을 둬, 올라가면서 이전 계단의 정보를 다시 확인할 수 있게함 -> 계단을 오르기가 훨씬 쉬워짐}}}$
+- Atrous Spatial Pyramid Pooling (ASPP)
+- Decoder: Bilinear Upsampling
+  - ${\textsf{\textbf{\color{blue}Bilinear Upsampling : 이미지를 더 크게 만드는 방법. 단순히 픽셀을 복사해서 이미지를 확대 X. 주변 픽셀들의 값을 이용해 부드럽게 확대}}}$
+ 
+![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/c450e555-5f6c-4aa7-ab34-7ca5ab05a18d)
+
+## DeepLab V3+
+- Encoder: ResNet with Atrous Convolution → Xception (Inception with Separable Convolution)
+  - ${\textsf{\textbf{\color{blue}Inception 구조 : 다양한 크기의 필터를 병렬로 사용하여 이미지 분석. 즉, 이미지의 여러 부분을 동시에 살펴봄}}}$
+    - ${\textsf{\textbf{\color{blue}=> 사진을 찍을 때 여러 개의 카메라 렌즈를 동시에 사용하여 다른 각도와 초점을 맞추는 것과 비슷함}}}$
+  - ${\textsf{\textbf{\color{blue}Separable convolution : 필터를 두 단계로 나눠 사용하는 방법. 공간적으로 먼저 분리하고, 그 다음 채널 별로 분리함 -> 계산량을 줄이면서도 성능을 높일 수 있음}}}$
+    - ${\textsf{\textbf{\color{blue} => 큰 그림을 그릴 때, 가로선과 세로선을 따로 그려서 더 빠르고 효율적으로 완성하는 것과 같음}}}$
+- ASPP → ASSPP (Atrous Separable Spatial Pyramid Pooling)
+  - ${\textsf{\textbf{\color{blue}Atrous convolution, Separable convolution, Spatial pyramid pooling}}}$
+  - ${\textsf{\textbf{\color{blue}위 세가지 기법을 결합하여, 이미지의 다양한 크기에서 중요한 정보를 추출하고 이를 하나로 합쳐 더 정확한 결과를 얻음 -> 성능을 높이면서도 계산량을 효율적으로 관리할 수 있음}}}$
+- Decoder: Bilinear Upsampling → Simplified U-Net style decoder
+  - ${\textsf{\textbf{\color{blue}이미지를 작은 블록으로 나눠서 중요한 정보를 추출한 후, 다시 원래 크기로 키우는 과정에서 각 단계에서 얻은 중요한 정보를 계속 사용함 -> 이미지를 더 정확하게 복원 가}}}$
+
+![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/2f8ba7c4-5bcd-4074-b347-17fdf5da7519)
+
+
+![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/9c1503a4-ddf5-4bd4-b807-ce5d9407543d)
+
+
+
+
+
+
+
+
+
