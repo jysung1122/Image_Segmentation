@@ -1,7 +1,7 @@
 # Image_Segmentation
 구글링을 통해 정리한 각각의 세그멘테이션 방식
 
-#### 24.07.09
+### 24.07.09
 
 ### Image Segmantation
 - 이미지 처리의 한 분야로, 이미지 내의 각 픽셀을 여러 클래스 중 하나로 분류하는 작업
@@ -24,7 +24,7 @@
 
 ![image](https://github.com/jysung1122/Image_Segmentation/assets/56614779/6da971d3-d601-48f6-b33f-17f3c8f3188a)
 
-#### 24.07.10
+### 24.07.10
 
 ## DeepLap 기반 세그멘테이션 
 - 버전이 업그레이드 되면서 발전되고 있음
