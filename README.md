@@ -69,7 +69,7 @@
     - ${\textsf{\textbf{\color{blue}-> 책의 세부사항과 전체적인 내용을 동시에 잘 이해할 수 있음}}}$
   - ${\textsf{\textbf{\color{red}잔차연결 : 네트워크의 일부 출력을 네트워크의 더 나중 단계에 다시 추가하는 방법 -> 깊은 신경망에서 정보가 더 잘 전달되고, 학습이 더 쉬워짐}}}$
     - ${\textsf{\textbf{\color{red}=> 깊은 신경망에서는 각 계단을 오르면서 새로운 것을 배워야 함}}}$
-    - ${\textsf{\textbf{\color{red}   잔차연결은 계단의 중간에 쉬는 플랫폼을 둬, 올라가면서 이전 계단의 정보를 다시 확인할 수 있게함 -> 계단을 오르기가 훨씬 쉬워짐}}}$
+    - ${\textsf{\textbf{\color{red}=> 잔차연결은 계단의 중간에 쉬는 플랫폼을 둬, 올라가면서 이전 계단의 정보를 다시 확인할 수 있게함 -> 계단을 오르기가 훨씬 쉬워짐}}}$
 - Atrous Spatial Pyramid Pooling (ASPP)
 - Decoder: Bilinear Upsampling
   - ${\textsf{\textbf{\color{blue}Bilinear Upsampling : 이미지를 더 크게 만드는 방법. 단순히 픽셀을 복사해서 이미지를 확대 X. 주변 픽셀들의 값을 이용해 부드럽게 확대}}}$
