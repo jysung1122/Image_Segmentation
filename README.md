@@ -21,3 +21,22 @@
  
 
 ![image](https://github.com/jysung1122/Image_Segmentation/assets/56614779/6da971d3-d601-48f6-b33f-17f3c8f3188a)
+
+
+### DeepLap 기반 세그멘테이션
+- 버전이 업그레이드 되면서 발전되고 있음
+
+## DeepLab V1 24.07.10
+- Atrous convolution 이라는 개념이 도입됨
+  - ${\textsf{\textbf{\color{blue}기존 convolution과 다르게 필터 내부에 빈 공간을 둔 채로 작동}}}$
+- 기존 convolution과 동일한 양의 파라미터와 계산량을 유지하면서 field of view (한 픽셀이 볼 수 있는 영역)를 크게 가져갈 수 있음
+  - ${\textsf{\textbf{\color{blue}기존 convolution에서는 작은 필터가 작은 영을 보면서 이미지를 처리함}}}$
+  - ${\textsf{\textbf{\color{blue}Atrous convolution은 필터 안에 빈 공간을 두어, 같은 크기의 필터로도 더 넓은 영역을 볼 수 있게 함}}}$
+  - ${\textsf{\textbf{\color{blue}=> 필터의 수나 계산량은 그대로 유지되면서도, 이미지를 더 넓게 볼 수 있어 더 많은 정보를 얻을 수 있음}}}$
+- Semantic segmentation에서 일반적으로 높은 성능을 내기 위해서는 convolutional neural network의 마지막에 존재하는 한 픽셀이 입력값에서 어느 크기의 영역을 커버할 수 있는지를 결정하는 receptive field 크기가 중요
+  - ${\textsf{\textbf{\color{blue}CNN에서 마지막 계층의 각 픽셀은 이전 계층의 여러 픽셀들을 결합하여 정보를 얻음}}}$
+  - ${\textsf{\textbf{\color{blue}이때, receptive field는 이 픽셀이 원래 이미지에서 커버하는 영역의 크기를 나타냄}}}$
+  - ${\textsf{\textbf{\color{blue}넓은 receptive field를 가지면, 더 넓은 범위의 정보를 고려할 수 있어 이미지의 복잡한 특징을 더 잘 포착할 수 있음}}}$
+- Atrous convolution을 활용하면 파라미터 수를 늘리지 않으면서도 receptive field를 크게 키울 수 있기 때문에 DeepLab 계열에서는 이를 적극적으로 활용
+
+![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/aa4c3416-eaac-4007-8a8f-bf1e7d6dc1d0)
