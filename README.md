@@ -86,7 +86,7 @@
   - ${\textsf{\textbf{\color{blue}Atrous convolution, Separable convolution, Spatial pyramid pooling}}}$
   - ${\textsf{\textbf{\color{blue}위 세가지 기법을 결합하여, 이미지의 다양한 크기에서 중요한 정보를 추출하고 이를 하나로 합쳐 더 정확한 결과를 얻음 -> 성능을 높이면서도 계산량을 효율적으로 관리할 수 있음}}}$
 - Decoder: Bilinear Upsampling → Simplified U-Net style decoder
-  - ${\textsf{\textbf{\color{blue}이미지를 작은 블록으로 나눠서 중요한 정보를 추출한 후, 다시 원래 크기로 키우는 과정에서 각 단계에서 얻은 중요한 정보를 계속 사용함 -> 이미지를 더 정확하게 복원 가}}}$
+  - ${\textsf{\textbf{\color{blue}이미지를 작은 블록으로 나눠서 중요한 정보를 추출한 후, 다시 원래 크기로 키우는 과정에서 각 단계에서 얻은 중요한 정보를 계속 사용함 -> 이미지를 더 정확하게 복원 가능}}}$
 
 ![image](https://github.com/jysung1122/Mini_Project_Secret_Auction/assets/56614779/2f8ba7c4-5bcd-4074-b347-17fdf5da7519)
 
