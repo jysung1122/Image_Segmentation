@@ -23,10 +23,10 @@
 ![image](https://github.com/jysung1122/Image_Segmentation/assets/56614779/6da971d3-d601-48f6-b33f-17f3c8f3188a)
 
 
-### DeepLap 기반 세그멘테이션
+## DeepLap 기반 세그멘테이션 24.07.10
 - 버전이 업그레이드 되면서 발전되고 있음
 
-## DeepLab V1 24.07.10
+## DeepLab V1 
 - Atrous convolution 이라는 개념이 도입됨
   - ${\textsf{\textbf{\color{blue}기존 convolution과 다르게 필터 내부에 빈 공간을 둔 채로 작동}}}$
 - 기존 convolution과 동일한 양의 파라미터와 계산량을 유지하면서 field of view (한 픽셀이 볼 수 있는 영역)를 크게 가져갈 수 있음
