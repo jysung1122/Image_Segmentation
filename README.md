@@ -30,7 +30,7 @@
 - Atrous convolution 이라는 개념이 도입됨
   - ${\textsf{\textbf{\color{blue}기존 convolution과 다르게 필터 내부에 빈 공간을 둔 채로 작동}}}$
 - 기존 convolution과 동일한 양의 파라미터와 계산량을 유지하면서 field of view (한 픽셀이 볼 수 있는 영역)를 크게 가져갈 수 있음
-  - ${\textsf{\textbf{\color{blue}기존 convolution에서는 작은 필터가 작은 영을 보면서 이미지를 처리함}}}$
+  - ${\textsf{\textbf{\color{blue}기존 convolution에서는 작은 필터가 작은 영역을 보면서 이미지를 처리함}}}$
   - ${\textsf{\textbf{\color{blue}Atrous convolution은 필터 안에 빈 공간을 두어, 같은 크기의 필터로도 더 넓은 영역을 볼 수 있게 함}}}$
   - ${\textsf{\textbf{\color{blue}=> 필터의 수나 계산량은 그대로 유지되면서도, 이미지를 더 넓게 볼 수 있어 더 많은 정보를 얻을 수 있음}}}$
 - Semantic segmentation에서 일반적으로 높은 성능을 내기 위해서는 convolutional neural network의 마지막에 존재하는 한 픽셀이 입력값에서 어느 크기의 영역을 커버할 수 있는지를 결정하는 receptive field 크기가 중요
